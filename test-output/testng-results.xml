@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-03T15:25:20 IST" name="Default suite" finished-at="2022-09-03T15:37:58 IST" duration-ms="757850">
+  <suite started-at="2022-09-04T17:24:09 IST" name="Default suite" finished-at="2022-09-04T18:03:44 IST" duration-ms="2375684">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerFile@f736069]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerFile@73e22a3d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-09-03T15:25:20 IST" name="Default test" finished-at="2022-09-03T15:37:58 IST" duration-ms="757850">
+    <test started-at="2022-09-04T17:24:09 IST" name="Default test" finished-at="2022-09-04T18:03:44 IST" duration-ms="2375684">
       <class name="Runner.RunnerFile">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.RunnerFile@f736069]" started-at="2022-09-03T15:25:21 IST" name="setUpClass" finished-at="2022-09-03T15:25:23 IST" duration-ms="1999" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.RunnerFile@73e22a3d]" started-at="2022-09-04T17:24:09 IST" name="setUpClass" finished-at="2022-09-04T17:24:09 IST" duration-ms="648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerFile@f736069]" started-at="2022-09-03T15:25:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-03T15:37:55 IST" duration-ms="752715" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerFile@73e22a3d]" started-at="2022-09-04T17:24:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-04T17:43:09 IST" duration-ms="1139473" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Seat Selection"]]>
+                <![CDATA["Seat Selection_CHROME"]]>
               </value>
             </param>
             <param index="1">
@@ -30,13 +30,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.RunnerFile@f736069]" started-at="2022-09-03T15:37:56 IST" name="tearDownClass" finished-at="2022-09-03T15:37:58 IST" duration-ms="2640" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerFile@73e22a3d]" started-at="2022-09-04T17:43:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-04T18:03:34 IST" duration-ms="1225095" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Seat Selection_EDGE"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Redbus"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.RunnerFile@73e22a3d]" started-at="2022-09-04T18:03:34 IST" name="tearDownClass" finished-at="2022-09-04T18:03:44 IST" duration-ms="10034" status="FAIL">
           <exception class="java.lang.reflect.InaccessibleObjectException">
             <message>
-              <![CDATA[Unable to make field private java.lang.String java.lang.Throwable.detailMessage accessible: module java.base does not "opens java.lang" to unnamed module @100fc185]]>
+              <![CDATA[Unable to make field private java.lang.String java.lang.Throwable.detailMessage accessible: module java.base does not "opens java.lang" to unnamed module @6cc4c815]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make field private java.lang.String java.lang.Throwable.detailMessage accessible: module java.base does not "opens java.lang" to unnamed module @100fc185
+              <![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make field private java.lang.String java.lang.Throwable.detailMessage accessible: module java.base does not "opens java.lang" to unnamed module @6cc4c815
 at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
 at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
 at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)

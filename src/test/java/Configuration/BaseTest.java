@@ -1,5 +1,7 @@
 package Configuration;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -167,4 +169,13 @@ public abstract class BaseTest {
 		else
 			return false;
 	}
+	
+	public static void robotKeyPress(int keycode) throws AWTException{
+		Robot robot = new Robot();
+		robot.keyPress(keycode);
+}
+	public static void robotKeyRelease(int keycode) throws AWTException{
+		Robot robot = new Robot();
+		robot.keyPress(keycode);
+}
 }

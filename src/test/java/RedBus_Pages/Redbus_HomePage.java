@@ -1,5 +1,6 @@
 package RedBus_Pages;
 
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ public class Redbus_HomePage extends BaseTest{
 	private static final By STARTDATE = By.xpath("//input[contains(@id,'onward_cal')]");	
 	private static final By RETURNDATE=By.xpath("//input[contains(@id,'r-date')]");
 
-	private static final By SearchButton = By.xpath("//button[contains(.,'SEARCH')]");
+	private static final By SearchButton = By.xpath("//button[contains(@id,'search_butn')]");
 
 	public Redbus_HomePage(WebDriver webdriver,Map<String,String> TestData) {
 		this.webdriver=webdriver;
@@ -66,7 +67,15 @@ public class Redbus_HomePage extends BaseTest{
 		String StartDate=TestData.get("StartDate");
 		String RetDate=TestData.get("ReturnDate");
 		SendKeys(SOURCE, src);
+		//Thread.sleep(2000);
+		//input[contains(@id,'src')]//following::div[contains(@class,'auto')][1]"
+		robotKeyPress(KeyEvent.VK_ENTER);
+		robotKeyRelease(KeyEvent.VK_ENTER);
 		SendKeys(DESTINATION, Dst);
+		Thread.sleep(3000);
+		robotKeyPress(KeyEvent.VK_ENTER);
+		robotKeyRelease(KeyEvent.VK_ENTER);
+		//executeClick(By.xpath("//input[contains(@id,'src')]//following::div[contains(@class,'auto')][1]"));
 		String Startdatexpath="//div[contains(@class,'DatePicker__MainBlock')][1]/descendant::span[text()='"+StartDate+"']";
 		String Returndatexpath="//div[contains(@class,'DatePicker__MainBlock')][1]/descendant::span[text()='"+RetDate+"']";
 		executeClick(STARTDATE);
